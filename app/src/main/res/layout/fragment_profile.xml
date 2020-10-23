@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearlayout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/scrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="@string/user_profile"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#E0DBDB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearlayout_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/mainAppColor"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@id/scrollView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearlayout_header">
+
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/smiling_emoji_with_eyes_opened" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   Hi, "
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/userMobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/profileTab"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#ffffff"
+                android:drawableStart="@drawable/loan_48"
+                android:drawableEnd="@drawable/action_sign_foreground"
+                android:drawablePadding="10dp"
+                android:gravity="left|center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:text="@string/loan_records"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.148" />
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffffff"
+                android:gravity="left|center_vertical"
+                android:paddingEnd="0dp"
+                android:text="@string/about"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:drawableStart="@mipmap/about"
+                android:drawableEnd="@drawable/action_sign_foreground"
+                />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffffff"
+                android:drawableStart="@drawable/follow_48"
+                android:drawableEnd="@drawable/action_sign_foreground"
+                android:drawablePadding="10dp"
+                android:gravity="left|center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:text="@string/follow_us"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffffff"
+                android:drawableStart="@drawable/like_48"
+                android:drawableEnd="@drawable/action_sign_foreground"
+                android:drawablePadding="10dp"
+                android:gravity="left|center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:text="@string/like_us"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffffff"
+                android:drawableStart="@drawable/settings_48"
+                android:drawableEnd="@drawable/action_sign_foreground"
+                android:drawablePadding="10dp"
+                android:gravity="left|center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:text="@string/log_out"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="519dp"
+                tools:ignore="RtlHardcoded" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
